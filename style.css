@@ -1,0 +1,118 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"); */
+:root {
+  --color-white: #ffffff;
+  --color-black: #202020;
+  --color-glass: rgba(255, 255, 255, 0.05);
+  --color-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: var(--color-white);
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background: url(bg.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+}
+
+.wrapper {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  font-size: 1rem;
+}
+.heading {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.heading h1 {
+  text-shadow: var(--color-shadow);
+  font-size: 6.2rem;
+  font-weight: 800;
+  letter-spacing: 0.15rem;
+}
+.heading h3 {
+  font-size: 1.6rem;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  background-color: var(--color-glass);
+  backdrop-filter: blur(12px);
+  box-shadow: var(--color-shadow);
+  padding: 8px 30px;
+  display: inline-block;
+}
+.countdown {
+  width: 95vw;
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+.box {
+  width: 28vmin;
+  height: 29vmin;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+}
+span.num {
+  background-color: var(--color-glass);
+  backdrop-filter: blur(12px);
+  height: 100%;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  font-size: 4rem;
+  box-shadow: var(--color-shadow);
+  border-radius: 0.1rem;
+}
+span.num:after {
+  content: "";
+  position: absolute;
+  background-color: var(--color-glass);
+  height: 100%;
+  width: 50%;
+  left: 0;
+}
+span.text {
+  font-size: 1em;
+  background-color: var(--color-white);
+  color: var(--color-black);
+  display: block;
+  width: 80%;
+  position: relative;
+  text-align: center;
+  bottom: 20px;
+  padding: 0.7rem 0;
+  font-weight: 600;
+  border-radius: o.3em;
+  box-shadow: var(--color-shadow);
+}
+@media (max-width: 420px) {
+    span.num{
+        font-size: 3.5rem;
+        transition: .3s ease;
+    }
+  span.text {
+    font-size: 0.9em;
+    background-color: var(--color-white);
+    color: var(--color-black);
+    display: block;
+    width: 90%;
+    position: relative;
+    text-align: center;
+    bottom: 10px;
+    padding: 0.4rem 0;
+    font-weight: 600;
+    border-radius: o.3em;
+    box-shadow: var(--color-shadow);
+  }
+}
